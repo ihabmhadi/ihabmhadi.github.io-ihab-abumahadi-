@@ -1,16 +1,21 @@
-# Ihab AbuMahadi — Portfolio
+# Ihab AbuMahadi — Premium Portfolio
 
-Static HTML website. Open `index.html` locally or publish to GitHub Pages.
+Static, responsive multi-page portfolio for GitHub Pages.
 
-## Publish
-1. Create a **public** repository named `YOUR-USERNAME.github.io`.
-2. Upload `index.html` to the repository root and commit.
-3. In Settings → Pages, choose Deploy from a branch, `main`, `/ (root)`, Save.
-4. Visit `https://YOUR-USERNAME.github.io/` after deployment completes.
+## Files
+- `index.html` — homepage, experience, education, skills, contact
+- `research.html` — research and publications
+- `projects.html` — applied projects
+- `style.css` — responsive styling and light/dark theme
+- `script.js` — theme toggle
 
-## Content review
-Please confirm degree dates (one older CV lists MSc 2022, newer CVs list 2026), job start month at EA (Oct/Nov 2024), exact degree wording, certification titles, and which ongoing research findings can be made public.
+## Deploy
+Upload **all five files** to the repository root. GitHub → Settings → Pages → Deploy from a branch → `main` → `/ (root)` → Save. Existing Pages deployments update automatically after a commit.
 
-No private credentials or source datasets should be committed.
-
-Verified corrections: professional name Ihab AbuMahadi; MSc Software Engineering & Data Science completed 2025; EA Telekomünikasyon began October 2024. Publication statuses remain individually labeled; do not mark ongoing research as published without a publication citation.
+## Editorial notes
+- MSc completion: 2025 (user confirmed).
+- EA Telekomünikasyon start: October 2024 (user confirmed).
+- Name: Ihab AbuMahadi (user confirmed).
+- Research status is project-specific: published DOI for ISSC 2025, other conference presentations or ongoing work as indicated in uploaded CVs.
+- Add a CV PDF and portrait only after confirming public release.
+- Avoid sharing confidential employer systems, data, or unpublished research assets.
