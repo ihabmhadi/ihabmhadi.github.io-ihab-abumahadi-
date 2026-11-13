@@ -11,3 +11,16 @@ if(ideaForm){ideaForm.addEventListener('submit',function(event){
  document.getElementById('ideaStatus').textContent='Your email application should open with the proposal. Please press Send there to submit it.';
  window.location.href='mailto:ihab.mhadi@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
 });}
+
+// Optional hosted submission service. Configure an actual Formspree endpoint in portal-config.js.
+const portalForm=document.getElementById('portalForm');
+if(portalForm)portalForm.addEventListener('submit',async function(e){
+ e.preventDefault();if(!portalForm.reportValidity())return;
+ const status=document.getElementById('portalStatus'),submit=document.getElementById('pSubmit');
+ const data=new FormData(portalForm);const ref='IA-'+new Date().toISOString().slice(0,10).replaceAll('-','')+'-'+(crypto.randomUUID?crypto.randomUUID().slice(0,8).toUpperCase():Math.random().toString(36).slice(2,10).toUpperCase());data.set('proposal_reference',ref);data.set('_subject','New collaboration proposal '+ref);
+ const endpoint=window.PORTAL_FORM_ENDPOINT||'';
+ if(endpoint){submit.disabled=true;status.textContent='Sending your proposal…';try{const response=await fetch(endpoint,{method:'POST',body:data,headers:{Accept:'application/json'}});if(!response.ok)throw Error('Submission service returned '+response.status);status.textContent='Proposal submitted successfully. Your reference: '+ref+'. Save this number for future correspondence. Submission does not imply acceptance.';portalForm.reset();}catch(err){status.textContent='Online submission could not be confirmed. Please retry or use the email option. No reference has been registered.';}finally{submit.disabled=false;}return;}
+ const entries=[...data.entries()].filter(([key])=>!key.startsWith('_')).map(([key,value])=>key+': '+value).join('\n\n');const subject='Collaboration proposal '+ref+' — '+data.get('project_title');
+ status.textContent='Your email application should open. You must press Send in that application to deliver the proposal. Your draft reference is '+ref+' (not registered until sent).';
+ window.location.href='mailto:ihab.mhadi@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(entries);
+});
