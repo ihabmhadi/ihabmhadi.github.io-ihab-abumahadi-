@@ -118,3 +118,27 @@ body.light .hero-v3,body.light .connect-qr{color:#eaf6ff}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #55e1d0;outline-offset:3px}
 @media(max-width:900px){.v8-feature-grid{grid-template-columns:1fr}.hero-v4 .hero-layout{padding-top:2rem!important}.hero-v4 .hero-visual{max-width:540px!important}}
 @media(max-width:600px){.hero-v4 .hero-layout{padding-top:1.5rem!important}.v8-feature-card{padding:20px}.hero-v4 .hero-visual{max-width:100%!important}}
+
+
+
+/* Keep full name on one line on desktop */
+@media (min-width: 901px) {
+  .hero-v4 h1 {
+    font-size: clamp(2.5rem, 4.2vw, 4.4rem) !important;
+    white-space: nowrap !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.045em !important;
+  }
+
+  .hero-v4 h1 span,
+  .hero-v4 h1 em {
+    display: inline !important;
+  }
+}
+
+/* Allow natural wrapping on smaller screens */
+@media (max-width: 900px) {
+  .hero-v4 h1 {
+    white-space: normal !important;
+  }
+}
