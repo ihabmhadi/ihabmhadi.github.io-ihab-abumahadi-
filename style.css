@@ -48,3 +48,51 @@ body.light .hero-v3,body.light .connect-qr{color:#eaf6ff}
 .consent{display:flex;gap:10px;align-items:start;line-height:1.5}
 .consent input{width:auto!important;margin-top:5px;accent-color:#46e0d3}
 @media(max-width:900px){.hero-v4 .hero-visual{max-width:500px!important}}
+
+/* V6 — Improved professional portrait display */
+
+.hero-v4 .hero-visual {
+  width: 100% !important;
+  max-width: 760px !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.hero-v4 .hero-visual::before,
+.hero-v4 .hero-visual::after {
+  display: none !important;
+}
+
+.hero-v4 .hero-ai-photo {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  object-fit: cover !important;
+  border-radius: 22px !important;
+  box-shadow: none !important;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero-v4 .hero-visual {
+    max-width: 600px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 580px) {
+  .hero-v4 .hero-visual {
+    max-width: 100% !important;
+  }
+
+  .hero-v4 .hero-ai-photo {
+    width: 100% !important;
+  }
+}
+
