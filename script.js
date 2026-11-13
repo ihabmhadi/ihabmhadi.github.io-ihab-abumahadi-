@@ -24,3 +24,7 @@ if(portalForm)portalForm.addEventListener('submit',async function(e){
  status.textContent='Your email application should open. You must press Send in that application to deliver the proposal. Your draft reference is '+ref+' (not registered until sent).';
  window.location.href='mailto:ihab.mhadi@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(entries);
 });
+
+// V7: accessible project category filters
+const projectFilters=document.querySelectorAll('.filter-btn[data-filter]');
+projectFilters.forEach(button=>button.addEventListener('click',()=>{const category=button.dataset.filter;projectFilters.forEach(b=>{const selected=b===button;b.classList.toggle('active',selected);b.setAttribute('aria-pressed',String(selected));});document.querySelectorAll('.project-card[data-category]').forEach(card=>{card.hidden=category!=='all'&&card.dataset.category!==category;});}));

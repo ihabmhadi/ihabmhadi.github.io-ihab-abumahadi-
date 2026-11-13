@@ -96,3 +96,8 @@ body.light .hero-v3,body.light .connect-qr{color:#eaf6ff}
   }
 }
 
+
+/* V7: tighter hero, training services, filterable project gallery */
+@media(min-width:901px){.hero-v4{padding-top:42px;padding-bottom:50px}.hero-v4 .hero-layout{padding-top:20px;padding-bottom:20px;min-height:0}}
+.training-section{background:linear-gradient(130deg,#081c2a,#0b293a)}.training-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}.training-grid .card{height:100%}.training-cta{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:32px;padding:25px;border:1px solid #2b6071;border-radius:16px;background:#10273b}.training-cta p{color:#b7cbd6;margin:0}.training-cta h3{margin:0 0 8px}.training-cta .btn{white-space:nowrap}.project-filters{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0}.filter-btn{background:#0b2436;color:#c8e4e9;border:1px solid #356477;border-radius:10px;padding:10px 15px;font:inherit;cursor:pointer}.filter-btn.active,.filter-btn:hover{background:#55e1d0;color:#061725;border-color:#55e1d0}.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.project-card[hidden]{display:none!important}.project-card p{line-height:1.65}.light .training-section{background:#e8f5f7;color:#142438}.light .training-cta{background:#fff;color:#142438}.light .training-cta p{color:#475569}.light .filter-btn:not(.active){background:#fff;color:#142438}
+@media(max-width:900px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.training-grid,.project-grid{grid-template-columns:1fr}.training-cta{flex-direction:column;align-items:flex-start}}
