@@ -1,19 +1,16 @@
-# Ihab AbuMahadi — Portfolio V4
-This update replaces the previous portrait card with a new AI-themed hero section. It preserves the existing experience, education, research, projects, contact and QR sections.
+# Ihab AbuMahadi Portfolio V5
 
-## Publish to GitHub Pages
-1. Open your GitHub repository.
-2. Upload all files from this ZIP, including the `assets` directory (or drag the contents of `assets` into the GitHub `assets` folder).
-3. Commit changes to the `main` branch.
-4. Wait for GitHub Pages deployment and refresh the site with Ctrl+Shift+R.
+## Changes
+- Original **unaltered** photograph supplied by Ihab, in `assets/ihab-authentic-portrait.png`.
+- Wider experience overview, preserving the existing career timeline.
+- New collaboration section and project proposal form.
+- Existing research, projects, contact details and QR code preserved.
 
-## Files
-- index.html — redesigned hero and existing homepage content
-- style.css — responsive hero styling and existing site styling
-- research.html / projects.html — unchanged research and projects
-- script.js — existing theme control
-- assets/ai-portrait-hero.webp — AI-generated portrait composition
-- assets/ihab-portrait.jpg — original prior portrait
-- assets/portfolio-qr.png — portfolio QR code
+## Publish
+Extract the ZIP, upload all files and `assets/` into the root of your existing GitHub Pages repository, and commit to `main`. Hard-refresh after deployment.
 
-Note: AI-generated portrait imagery may differ slightly from the original photograph. Use the original photograph instead if exact photographic likeness is required.
+## How submissions work
+GitHub Pages is a static host. The form uses `mailto:` to open the visitor's configured email application with a pre-filled message to `ihab.mhadi@gmail.com`. **The visitor must click Send**; the website does not receive, store, or automatically transmit proposals. For direct browser submissions without an email application, connect a hosted form service or backend with spam protection and a privacy notice.
+
+## Accuracy
+Experience descriptions are based on the existing website and the resume available in this conversation. Verify all dates and claims before publication.
